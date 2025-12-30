@@ -1,341 +1,561 @@
 // config/siteConfig.js
 export const siteConfig = {
-  siteName: 'Bigwood Bathrooms & Kitchens',
+  siteName: 'Nena Craft Bakery',
   logo: {
-    text: 'Bigwood Bathrooms & Kitchens',
-    src: '/logo/bigwood-logo.png',
-    alt: 'Bigwood Bathrooms & Kitchens Logo',
-    height: 50,
+    text: 'Nena Craft Bakery',
+    src: '/logo/nena-logo.png',
+    alt: 'Nena Craft Bakery Logo',
+    height: 60,
   },
   metadata: {
     base: {
-      title: 'Bigwood Bathrooms & Kitchens – Quality Bathrooms, Kitchens & Tiling',
+      title: 'Nena Craft Bakery – Sourdough Bakery, Cafe & Speciality Coffee',
       description:
-        'Professional bathroom fitting, kitchen installation, and tiling services. Quality craftsmanship with attention to detail. Serving the local area and surroundings.',
+        'Artisan sourdough bakery, cafe and speciality coffee in Buckinghamshire. Freshly baked pastries, celebration cakes, and locally sourced seasonal ingredients.',
       icons: { icon: '/favicon.ico' },
     },
   },
 
   fonts: {
-    base: `'Open Sans', sans-serif`,
-    heading: `'Playfair Display', serif`,
-    baseClass: 'font-opensans',
-    headingClass: 'font-playfair',
-    google: { base: 'Open Sans', heading: 'Playfair Display', accent: 'Open Sans' },
+    base: `'Nunito Sans', sans-serif`,
+    heading: `'Cormorant Garamond', serif`,
+    baseClass: 'font-nunito',
+    headingClass: 'font-cormorant',
+    google: { base: 'Nunito Sans', heading: 'Cormorant Garamond', accent: 'Nunito Sans' },
   },
 
-  // Warm professional color scheme
+  // Warm bakery color scheme
   brand: {
-    primary: '#B8860B', // warm copper/bronze
-    secondary: '#2D2D2D', // dark charcoal
-    accent: '#F5F0E8', // warm tan/beige
+    primary: '#94B087', // sage green from logo
+    secondary: '#F2C4C4', // warm pink/blush
+    accent: '#F9E5A0', // soft yellow
+    mint: '#D4E8D1', // light mint
+    dark: '#2D2D2D', // dark text
     background: '#FFFFFF', // clean white
-    dark: '#333333', // dark gray text
   },
 
   styles: {
     bgLight: 'bg-white',
-    bgPrimary: 'bg-[#B8860B]',
-    bgSecondary: 'bg-[#2D2D2D]',
-    bgAccent: 'bg-[#F5F0E8]',
-    textPrimary: 'text-[#333333]',
+    bgPrimary: 'bg-[#94B087]',
+    bgSecondary: 'bg-[#F2C4C4]',
+    bgAccent: 'bg-[#F9E5A0]',
+    bgMint: 'bg-[#D4E8D1]',
+    textPrimary: 'text-[#2D2D2D]',
     textMuted: 'text-[#666666]',
     textLight: 'text-white',
-    borderLight: 'border-[#F5F0E8]',
-    borderDark: 'border-[#B8860B]',
+    borderLight: 'border-[#D4E8D1]',
+    borderPrimary: 'border-[#94B087]',
   },
 
   banner: {
-    show: false,
+    show: true,
+    text: 'Sourdough Bakery, Cafe & Speciality Coffee • local • seasonal • independent',
+    scrolling: true,
   },
 
   nav: {
     links: [
       { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },
-      { label: 'Services', href: '/services' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Pastries', href: '/pastries' },
+      { label: 'Menu', href: '/menu' },
+      { label: 'Locations', href: '/locations' },
     ],
+    cta: {
+      text: 'Order Now',
+      href: '/locations',
+    },
   },
 
   footer: {
-    copyright: 'Bigwood Bathrooms & Kitchens',
-    nav: [
-      { label: 'Home', href: '/' },
-      { label: 'About', href: '/about' },
-      { label: 'Services', href: '/services' },
-      { label: 'Contact', href: '/contact' },
+    copyright: 'Nena Craft Bakery',
+    columns: [
+      {
+        title: 'Explore',
+        links: [
+          { label: 'About', href: '/about' },
+          { label: 'Pastries', href: '/pastries' },
+          { label: 'Menu', href: '/menu' },
+          { label: 'Locations', href: '/locations' },
+        ],
+      },
+      {
+        title: 'Info',
+        links: [
+          { label: 'Contact', href: '/locations#contact' },
+          { label: 'Careers', href: '/careers' },
+          { label: 'Privacy Policy', href: '/privacy' },
+        ],
+      },
     ],
     social: {
-      instagram: '',
-      facebook: '',
-      linkedin: '',
-      twitter: '',
+      instagram: 'https://www.instagram.com/nena_craftbakery',
+      facebook: 'https://www.facebook.com/p/Nena-Craft-Bakery-100094162370332',
       tiktok: '',
-      youtube: '',
-      tripadvisor: '',
+    },
+    locations: [
+      {
+        name: 'Berkhamsted',
+        address: '214 High Street',
+      },
+      {
+        name: 'Amersham',
+        address: '53 Sycamore Road',
+      },
+    ],
+    contact: {
+      email: 'hello@nenacraftbakery.co.uk',
+      phone: '01234 567890',
     },
   },
 
   hero: {
-    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2340&auto=format&fit=crop',
-    imageAlt: 'Modern luxury bathroom with elegant fixtures',
-    heading: 'Quality Bathrooms, Kitchens & Tiling',
-    subheading: 'Transforming your home with expert craftsmanship',
-    ctaText: 'Get a Quote',
-    ctaHref: '/contact',
-    secondaryCtaText: 'View Our Work',
-    secondaryCtaHref: '#projects',
-  },
-
-  welcome: {
-    heading: 'Welcome to Bigwood Bathrooms & Kitchens',
-    content: `We are a trusted local business specialising in high-quality bathroom installations, kitchen fitting, and professional tiling services. With years of experience in the trade, we take pride in delivering exceptional results that transform your living spaces.
-
-From complete bathroom renovations to stunning kitchen makeovers and precision tiling work, our skilled team handles every project with meticulous attention to detail. We work closely with our clients to understand their vision and bring it to life, ensuring complete satisfaction every time.`,
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
-    imageAlt: 'Beautiful modern kitchen installation',
-  },
-
-  services: {
-    heading: 'Our Services',
-    subheading: 'Comprehensive solutions for your home improvement needs',
-    items: [
+    slides: [
       {
-        title: 'Bathroom Fitting',
-        description: 'Complete bathroom installations from design to completion. We handle everything including plumbing, tiling, and fixtures.',
-        icon: 'bath',
-        features: [
-          'Full bathroom design consultation',
-          'Complete installation service',
-          'Plumbing and electrical work',
-          'High-quality fixtures and fittings',
-          'Wet room installations',
-          'Accessible bathroom solutions',
-        ],
+        image: '/images/sourdough-loaves.jpg',
+        imageAlt: 'Fresh artisan sourdough bread',
+        heading: 'Freshly Baked, Every Day',
+        subheading: 'Artisan sourdough, pastries and speciality coffee in the heart of Buckinghamshire',
+        ctaText: 'View Our Menu',
+        ctaHref: '/menu',
       },
       {
-        title: 'Kitchen Installation',
-        description: 'Professional kitchen fitting services. Transform your kitchen with our expert installation and attention to detail.',
-        icon: 'kitchen',
-        features: [
-          'Kitchen design and planning',
-          'Cabinet and worktop installation',
-          'Appliance fitting',
-          'Plumbing and electrical connections',
-          'Splashback and tiling',
-          'Complete project management',
-        ],
+        image: '/images/croissants.jpg',
+        imageAlt: 'Fresh croissants and pastries',
+        heading: 'Handcrafted Pastries',
+        subheading: 'Buttery croissants, flaky danishes, and sweet treats baked fresh every morning',
+        ctaText: 'See Pastries',
+        ctaHref: '/pastries',
       },
       {
-        title: 'Tiling',
-        description: 'Expert wall and floor tiling for bathrooms, kitchens, and throughout your home. Precision cuts and flawless finishes.',
-        icon: 'grid',
-        features: [
-          'Wall and floor tiling',
-          'Natural stone installation',
-          'Porcelain and ceramic tiles',
-          'Mosaic and feature walls',
-          'Underfloor heating compatible',
-          'Waterproofing and tanking',
-        ],
-      },
-      {
-        title: 'Renovations',
-        description: 'Full renovation services to modernise and refresh your bathroom or kitchen. Complete transformation guaranteed.',
-        icon: 'home',
-        features: [
-          'Complete room renovations',
-          'Structural modifications',
-          'Plumbing upgrades',
-          'Electrical rewiring',
-          'Plastering and finishing',
-          'Project coordination',
-        ],
-      },
-      {
-        title: 'Repairs & Maintenance',
-        description: 'Quick and reliable repair services for all bathroom and kitchen issues. From leaky taps to broken tiles.',
-        icon: 'wrench',
-        features: [
-          'Tap and shower repairs',
-          'Toilet and cistern fixes',
-          'Tile replacement',
-          'Grouting and resealing',
-          'Leak detection and repair',
-          'General maintenance',
-        ],
+        image: '/images/coffee-latte.jpg',
+        imageAlt: 'Speciality coffee latte art',
+        heading: 'Speciality Coffee',
+        subheading: 'Expertly roasted, carefully brewed - the perfect companion to your morning pastry',
+        ctaText: 'Visit Us',
+        ctaHref: '/locations',
       },
     ],
   },
 
-  whyChooseUs: {
-    heading: 'Why Choose Us',
-    subheading: 'Quality workmanship you can trust',
+  products: {
+    heading: 'Our Products',
+    subheading: 'Handcrafted with love using locally sourced, seasonal ingredients',
     items: [
       {
-        title: 'Expert Craftsmanship',
-        description: 'Years of experience delivering exceptional results with attention to every detail.',
-        icon: 'award',
+        title: 'Sourdough Loaves',
+        image: '/images/bread-loaf.jpg',
+        href: '/pastries?category=sourdough',
       },
       {
-        title: 'Quality Materials',
-        description: 'We use only premium materials and products from trusted suppliers.',
-        icon: 'gem',
+        title: 'Pastries & Viennoiserie',
+        image: '/images/croissants.jpg',
+        href: '/pastries?category=viennoiserie',
       },
       {
-        title: 'Fully Insured',
-        description: 'Complete peace of mind with full public liability insurance coverage.',
-        icon: 'shield',
+        title: 'Cakes & Celebration',
+        image: '/images/cakes-display.jpg',
+        href: '/pastries?category=cakes',
       },
       {
-        title: 'Free Quotes',
-        description: 'Transparent pricing with no hidden costs. Get a free, no-obligation quote.',
-        icon: 'calculator',
+        title: 'Sweet Treats',
+        image: '/images/sweet-treats.jpg',
+        href: '/pastries?category=sweet',
+      },
+      {
+        title: 'Coffee & Drinks',
+        image: '/images/coffee-latte.jpg',
+        href: '/menu#drinks',
       },
     ],
+  },
+
+  occasions: {
+    heading: 'Treats for Any Occasion',
+    subheading: "From birthday cakes to morning pastries, we've got you covered",
+    items: [
+      {
+        title: 'Best Sellers',
+        image: '/images/pastries-display.jpg',
+        href: '/pastries',
+      },
+      {
+        title: 'Celebration Cakes',
+        image: '/images/celebration-cake.jpg',
+        href: '/pastries?category=cakes',
+      },
+      {
+        title: 'Gifts & Hampers',
+        image: '/images/baked-goods.jpg',
+        href: '/pastries?category=gifts',
+      },
+      {
+        title: 'Seasonal Specials',
+        image: '/images/sweet-treats.jpg',
+        href: '/pastries?category=seasonal',
+      },
+    ],
+  },
+
+  visitUs: {
+    heading: 'Delivery and Pick Up',
+    subheading: 'Pop into one of our two locations or order ahead for collection',
+    options: [
+      {
+        title: 'Order Ahead',
+        description: 'Skip the queue - order online for collection at your preferred time',
+        icon: 'smartphone',
+        href: '/locations',
+      },
+      {
+        title: 'Cafe Dine-In',
+        description: 'Enjoy your treats in our cosy cafe with a freshly brewed coffee',
+        icon: 'coffee',
+        href: '/locations',
+      },
+      {
+        title: 'Catering & Events',
+        description: 'Let us make your special occasion even sweeter',
+        icon: 'calendar',
+        href: '/locations#contact',
+      },
+    ],
+  },
+
+  catering: {
+    heading: 'Catering, Gifting & Events',
+    subheading: 'Our team is ready to make your event special with custom orders and catering packages. No occasion too big or small!',
+    ctaText: 'Get Started',
+    ctaHref: '/locations#contact',
+    image: '/images/cakes-display.jpg',
+    imageAlt: 'Beautiful celebration cakes display',
+  },
+
+  newsletter: {
+    heading: 'Join Our Newsletter',
+    subheading: 'Get the freshest Nena updates, offers and a treat on your birthday!',
+    placeholder: 'Enter your email',
+    buttonText: 'Subscribe',
   },
 
   about: {
-    heading: 'About Bigwood Bathrooms & Kitchens',
-    content: `Bigwood Bathrooms & Kitchens is a dedicated team of skilled tradespeople committed to delivering outstanding bathroom, kitchen, and tiling solutions for homeowners across the local area.
+    heading: 'Our Story',
+    intro: 'Baked with Love, Served with Care',
+    content: `At Nena Craft Bakery, we believe that great bread starts with great ingredients and even better intentions. Founded in the heart of Buckinghamshire, our bakery is a labour of love dedicated to the art of sourdough and artisan baking.
 
-With a passion for quality craftsmanship and an eye for detail, we approach every project—big or small—with the same level of care and professionalism. From initial consultation through to final completion, we work closely with our clients to ensure their vision becomes reality.
+Every loaf we bake begins with a 24-hour fermentation process, using only the finest organic flours and our carefully nurtured sourdough starter. This slow approach creates bread with exceptional flavour, beautiful texture, and natural goodness.
 
-Our reputation is built on honest communication, reliable service, and workmanship that speaks for itself. We take pride in leaving every customer completely satisfied with their transformed space.`,
-    image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=2340&auto=format&fit=crop',
-    imageAlt: 'Professional tradesperson at work',
-    features: [
-      'Experienced professionals',
-      'Quality guaranteed',
-      'Fully insured',
-      'Local business',
-    ],
-    stats: [
-      { value: '10+', label: 'Years Experience' },
-      { value: '500+', label: 'Projects Completed' },
-      { value: '100%', label: 'Satisfaction Rate' },
-    ],
+We work closely with local farmers and suppliers to source seasonal ingredients, ensuring that every croissant, cake, and coffee reflects our commitment to quality and community. Our cafe is a gathering place for neighbours and friends, where the aroma of fresh bread fills the air and every visit feels like coming home.`,
+    image: '/images/bakery-counter.jpg',
+    imageAlt: 'Bakery counter with fresh baked goods',
     values: [
       {
-        title: 'Quality First',
-        description: 'We never compromise on quality. Every project receives our full attention and expertise.',
+        title: 'Local & Seasonal',
+        description: 'We source ingredients from local farms and suppliers, celebrating the seasons in every bake.',
+        icon: 'leaf',
       },
       {
-        title: 'Customer Focused',
-        description: 'Your satisfaction is our priority. We listen, advise, and deliver exactly what you need.',
+        title: 'Handcrafted Daily',
+        description: 'Every item is made fresh each morning by our skilled bakers using traditional techniques.',
+        icon: 'heart',
       },
       {
-        title: 'Honest & Transparent',
-        description: 'Clear communication and fair pricing. No hidden costs or unexpected surprises.',
-      },
-      {
-        title: 'Reliable Service',
-        description: 'We turn up when we say we will and complete projects on time and within budget.',
+        title: 'Community Focused',
+        description: 'We are proud to be part of our local community, supporting local causes and creating a welcoming space for all.',
+        icon: 'users',
       },
     ],
   },
 
-  gallery: {
-    heading: 'Featured Projects',
-    subheading: 'A selection of our recent work',
-    images: [
+  pastries: {
+    heading: 'Our Pastries',
+    subheading: 'Freshly baked every morning',
+    categories: ['All', 'Viennoiserie', 'Sweet Pastries', 'Savoury', 'Cakes', 'Sourdough'],
+    items: [
       {
-        src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Modern luxury bathroom renovation',
-        category: 'bathroom',
+        name: 'Classic Croissant',
+        description: 'Buttery, flaky layers of perfection',
+        price: '3.50',
+        category: 'Viennoiserie',
+        image: '/images/croissants.jpg',
       },
       {
-        src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Contemporary kitchen installation',
-        category: 'kitchen',
+        name: 'Pain au Chocolat',
+        description: 'Classic chocolate-filled pastry',
+        price: '3.95',
+        category: 'Viennoiserie',
+        image: '/images/pastries-display.jpg',
       },
       {
-        src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Elegant bathroom with freestanding bath',
-        category: 'bathroom',
+        name: 'Almond Croissant',
+        description: 'Filled with frangipane, topped with flaked almonds',
+        price: '4.50',
+        category: 'Viennoiserie',
+        image: '/images/croissants.jpg',
       },
       {
-        src: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Modern white kitchen design',
-        category: 'kitchen',
+        name: 'Cinnamon Bun',
+        description: 'Soft, swirled with cinnamon and topped with cream cheese frosting',
+        price: '4.25',
+        category: 'Sweet Pastries',
+        image: '/images/sweet-treats.jpg',
       },
       {
-        src: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Professional tile work',
-        category: 'tiling',
+        name: 'Cardamom Bun',
+        description: 'Swedish-style with aromatic cardamom and pearl sugar',
+        price: '4.25',
+        category: 'Sweet Pastries',
+        image: '/images/baked-goods.jpg',
       },
       {
-        src: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=2340&auto=format&fit=crop',
-        alt: 'Stylish bathroom renovation',
-        category: 'bathroom',
+        name: 'Danish Pastry',
+        description: 'Seasonal fruit and vanilla custard',
+        price: '4.50',
+        category: 'Sweet Pastries',
+        image: '/images/pastries-display.jpg',
+      },
+      {
+        name: 'Sausage Roll',
+        description: 'Flaky pastry with premium pork filling',
+        price: '4.50',
+        category: 'Savoury',
+        image: '/images/baked-goods.jpg',
+      },
+      {
+        name: 'Cheese & Ham Croissant',
+        description: 'Gruyere cheese and oak-smoked ham',
+        price: '4.95',
+        category: 'Savoury',
+        image: '/images/croissants.jpg',
+      },
+      {
+        name: 'Spinach & Feta Swirl',
+        description: 'Flaky pastry with spinach and tangy feta',
+        price: '4.50',
+        category: 'Savoury',
+        image: '/images/pastries-display.jpg',
+      },
+      {
+        name: 'Victoria Sponge',
+        description: 'Classic British cake with jam and cream',
+        price: '4.95',
+        category: 'Cakes',
+        image: '/images/cakes-display.jpg',
+      },
+      {
+        name: 'Carrot Cake',
+        description: 'Moist spiced cake with cream cheese frosting',
+        price: '4.95',
+        category: 'Cakes',
+        image: '/images/celebration-cake.jpg',
+      },
+      {
+        name: 'Chocolate Brownie',
+        description: 'Rich, fudgy, and deeply chocolatey',
+        price: '3.95',
+        category: 'Cakes',
+        image: '/images/sweet-treats.jpg',
+      },
+      {
+        name: 'Classic Sourdough',
+        description: 'Our signature 24-hour fermented loaf',
+        price: '5.50',
+        category: 'Sourdough',
+        image: '/images/sourdough-loaves.jpg',
+      },
+      {
+        name: 'Seeded Sourdough',
+        description: 'Packed with sunflower, pumpkin and sesame seeds',
+        price: '6.00',
+        category: 'Sourdough',
+        image: '/images/bread-loaf.jpg',
+      },
+      {
+        name: 'Focaccia',
+        description: 'Olive oil, rosemary and sea salt',
+        price: '5.95',
+        category: 'Sourdough',
+        image: '/images/sourdough-loaves.jpg',
       },
     ],
   },
 
-  testimonials: {
-    heading: 'What Our Clients Say',
-    subheading: "Don't just take our word for it",
-    entries: [
+  menu: {
+    heading: 'Our Menu',
+    subheading: 'Sourdough, pastries, speciality coffee & more',
+    note: 'Menus may vary by location. Pop in to see today\'s selection!',
+    dietaryKey: [
+      { label: 'V', description: 'Vegetarian' },
+      { label: 'VG', description: 'Vegan' },
+      { label: 'GF', description: 'Gluten-Free Available' },
+    ],
+    sections: [
       {
-        quote: 'Absolutely delighted with our new bathroom. The team were professional, tidy, and the finished result exceeded our expectations. Would highly recommend to anyone looking for quality workmanship.',
-        name: 'Sarah M.',
-        location: 'Local Area',
+        title: 'Bakery',
+        categories: [
+          {
+            name: 'Sourdough Loaves',
+            items: [
+              { name: 'Classic White Sourdough', price: '5.50', dietary: ['V'] },
+              { name: 'Seeded Sourdough', price: '6.00', dietary: ['V', 'VG'] },
+              { name: 'Rye Sourdough', price: '6.00', dietary: ['V', 'VG'] },
+              { name: 'Olive & Rosemary Focaccia', price: '5.95', dietary: ['V', 'VG'] },
+            ],
+          },
+          {
+            name: 'Pastries & Viennoiserie',
+            items: [
+              { name: 'Classic Croissant', price: '3.50', dietary: ['V'] },
+              { name: 'Pain au Chocolat', price: '3.95', dietary: ['V'] },
+              { name: 'Almond Croissant', price: '4.50', dietary: ['V'] },
+              { name: 'Cinnamon Bun', price: '4.25', dietary: ['V'] },
+            ],
+          },
+          {
+            name: 'Sweet Treats',
+            items: [
+              { name: 'Chocolate Brownie', price: '3.95', dietary: ['V', 'GF'] },
+              { name: 'Victoria Sponge Slice', price: '4.95', dietary: ['V'] },
+              { name: 'Carrot Cake', price: '4.95', dietary: ['V'] },
+              { name: 'Lemon Drizzle', price: '4.50', dietary: ['V'] },
+            ],
+          },
+        ],
       },
       {
-        quote: 'From start to finish, the service was excellent. They helped us design the perfect kitchen and the installation was completed on time and on budget. Fantastic attention to detail.',
-        name: 'James & Emma T.',
-        location: 'Local Area',
+        title: 'Cafe',
+        categories: [
+          {
+            name: 'Breakfast',
+            items: [
+              { name: 'Sourdough Toast & Jam', price: '4.50', dietary: ['V', 'VG'] },
+              { name: 'Avocado on Sourdough', price: '8.95', dietary: ['V', 'VG'] },
+              { name: 'Eggs Your Way on Toast', price: '7.95', dietary: ['V', 'GF'] },
+              { name: 'Full English', price: '12.95', dietary: ['GF'] },
+              { name: 'Veggie Breakfast', price: '11.95', dietary: ['V', 'GF'] },
+            ],
+          },
+          {
+            name: 'Lunch',
+            items: [
+              { name: 'Soup of the Day', price: '6.95', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Grilled Cheese Toastie', price: '7.95', dietary: ['V'] },
+              { name: 'Ham & Cheese Toastie', price: '8.50', dietary: [] },
+              { name: 'Seasonal Salad', price: '9.95', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Quiche of the Day', price: '8.95', dietary: ['V'] },
+            ],
+          },
+          {
+            name: 'Kids Menu',
+            items: [
+              { name: 'Mini Toast Soldiers', price: '3.95', dietary: ['V'] },
+              { name: 'Cheese Toastie', price: '5.50', dietary: ['V'] },
+              { name: 'Mini Pancakes', price: '5.95', dietary: ['V'] },
+            ],
+          },
+        ],
       },
       {
-        quote: 'Had our entire bathroom retiled and a new shower installed. The quality of work is outstanding. Very pleased we chose Bigwood Bathrooms & Kitchens for our project.',
-        name: 'David C.',
-        location: 'Local Area',
+        title: 'Drinks',
+        categories: [
+          {
+            name: 'Speciality Coffee',
+            items: [
+              { name: 'Espresso', price: '2.50', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Americano', price: '3.20', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Flat White', price: '3.80', dietary: ['V', 'GF'] },
+              { name: 'Latte', price: '3.80', dietary: ['V', 'GF'] },
+              { name: 'Cappuccino', price: '3.80', dietary: ['V', 'GF'] },
+              { name: 'Oat Milk +', price: '0.50', dietary: ['VG'] },
+            ],
+          },
+          {
+            name: 'Tea & Hot Drinks',
+            items: [
+              { name: 'English Breakfast Tea', price: '2.80', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Earl Grey', price: '2.80', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Herbal Tea Selection', price: '3.00', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Hot Chocolate', price: '3.95', dietary: ['V', 'GF'] },
+              { name: 'Chai Latte', price: '4.20', dietary: ['V', 'GF'] },
+            ],
+          },
+          {
+            name: 'Cold Drinks',
+            items: [
+              { name: 'Iced Latte', price: '4.20', dietary: ['V', 'GF'] },
+              { name: 'Iced Americano', price: '3.50', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Fresh Orange Juice', price: '3.95', dietary: ['V', 'VG', 'GF'] },
+              { name: 'Homemade Lemonade', price: '3.50', dietary: ['V', 'VG', 'GF'] },
+            ],
+          },
+        ],
       },
     ],
   },
 
-  contact: {
-    heading: 'Get in Touch',
-    subheading: 'Ready to start your project? Contact us for a free, no-obligation quote.',
-    phone: '07853 397359',
-    email: 'info@bigwoodbathrooms.co.uk',
-    serviceArea: 'Serving the local area and surrounding regions',
-    hours: [
-      { day: 'Monday - Friday', time: '8:00 AM - 6:00 PM' },
-      { day: 'Saturday', time: '9:00 AM - 4:00 PM' },
-      { day: 'Sunday', time: 'Closed' },
+  locations: {
+    heading: 'Find Us',
+    subheading: 'Two locations, one love for great food',
+    sites: [
+      {
+        name: 'Berkhamsted',
+        address: '214 High Street, Berkhamsted',
+        postcode: 'HP4 1AG',
+        image: '/images/bakery-interior-1.jpg',
+        hours: [
+          { days: 'Mon - Fri', time: '8am - 5pm' },
+          { days: 'Saturday', time: '8am - 5pm' },
+          { days: 'Sunday', time: '9am - 4pm' },
+        ],
+        mapUrl: 'https://maps.google.com/?q=214+High+Street+Berkhamsted',
+      },
+      {
+        name: 'Amersham',
+        address: '53 Sycamore Road, Amersham',
+        postcode: 'HP6 5EQ',
+        image: '/images/cafe-interior.jpg',
+        hours: [
+          { days: 'Mon - Fri', time: '8am - 5pm' },
+          { days: 'Saturday', time: '8am - 5pm' },
+          { days: 'Sunday', time: '9am - 4pm' },
+        ],
+        mapUrl: 'https://maps.google.com/?q=53+Sycamore+Road+Amersham',
+      },
     ],
-    form: {
-      heading: 'Request a Quote',
-      fields: {
-        name: { label: 'Name', placeholder: 'Your name' },
-        email: { label: 'Email', placeholder: 'you@example.com' },
-        phone: { label: 'Phone', placeholder: 'Your phone number' },
-        service: {
-          label: 'Service Interested In',
-          options: [
-            'Bathroom Installation',
-            'Kitchen Fitting',
-            'Tiling',
-            'Full Renovation',
-            'Repairs & Maintenance',
-            'Other',
-          ],
+    contact: {
+      heading: 'Get in Touch',
+      email: 'hello@nenacraftbakery.co.uk',
+      phone: '01234 567890',
+      form: {
+        heading: 'Send us a message',
+        fields: {
+          name: { label: 'Name', placeholder: 'Your name' },
+          email: { label: 'Email', placeholder: 'you@example.com' },
+          message: { label: 'Message', placeholder: 'How can we help?' },
         },
-        message: { label: 'Message', placeholder: 'Tell us about your project...' },
+        button: 'Send Message',
       },
-      button: 'Send Message',
     },
   },
 
-  cta: {
-    heading: 'Ready to Transform Your Space?',
-    subheading: 'Get in touch today for a free, no-obligation quote',
-    phone: '07853 397359',
-    buttonText: 'Call Us Now',
-    buttonHref: 'tel:07853397359',
-    secondaryButtonText: 'Request a Quote',
-    secondaryButtonHref: '/contact',
+  testimonials: {
+    heading: 'What Our Customers Say',
+    entries: [
+      {
+        quote: 'The best sourdough I have ever tasted! The crust is perfectly crispy and the inside is so soft and flavourful. A must-visit bakery.',
+        name: 'Emma S.',
+        location: 'Berkhamsted',
+      },
+      {
+        quote: 'My go-to spot for weekend brunch. The pastries are incredible and the coffee is exactly how I like it. The staff are always so welcoming!',
+        name: 'James & Sophie',
+        location: 'Amersham',
+      },
+      {
+        quote: 'Ordered a birthday cake for my daughter and it was absolutely stunning. Not only beautiful but delicious too. Will definitely be back!',
+        name: 'Rachel T.',
+        location: 'Chesham',
+      },
+    ],
   },
 };

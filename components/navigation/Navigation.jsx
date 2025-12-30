@@ -24,23 +24,49 @@ export default function Navigation() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4">
-      {/* Floating navbar container */}
-      <nav
-        className={`max-w-7xl mx-auto bg-white rounded-lg shadow-lg transition-all duration-300 ${
-          scrolled ? 'shadow-xl' : 'shadow-lg'
+    <>
+      {/* Top Banner Bar */}
+      {siteConfig.banner.show && (
+        <div className="bg-[#FEF8EE] text-dark py-2 overflow-hidden">
+          <div className={siteConfig.banner.scrolling ? 'animate-scroll-banner whitespace-nowrap' : 'text-center'}>
+            {siteConfig.banner.scrolling ? (
+              <>
+                <span className="inline-block px-8 text-sm font-medium">
+                  {siteConfig.banner.text}
+                </span>
+                <span className="inline-block px-8 text-sm font-medium">
+                  {siteConfig.banner.text}
+                </span>
+                <span className="inline-block px-8 text-sm font-medium">
+                  {siteConfig.banner.text}
+                </span>
+                <span className="inline-block px-8 text-sm font-medium">
+                  {siteConfig.banner.text}
+                </span>
+              </>
+            ) : (
+              <span className="text-sm font-medium">{siteConfig.banner.text}</span>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Main Navigation */}
+      <header
+        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
+          scrolled ? 'shadow-md' : 'shadow-sm'
         }`}
       >
-        <div className="px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex items-center justify-between">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center flex-shrink-0">
               <Image
-                src="/logo/bigwood-logo.png"
+                src={siteConfig.logo.src}
                 alt={siteConfig.logo.alt}
                 width={180}
-                height={50}
-                className="h-10 sm:h-12 w-auto"
+                height={60}
+                className="h-14 sm:h-16 w-auto"
                 priority
               />
             </Link>
@@ -51,29 +77,31 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-medium transition-colors duration-300 hover:text-[#B8860B] ${
+                  className={`font-medium transition-colors duration-300 hover:text-primary ${
                     pathname === link.href
-                      ? 'text-[#B8860B]'
-                      : 'text-[#333333]'
+                      ? 'text-primary'
+                      : 'text-dark'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
+            </div>
 
-              {/* CTA Button */}
+            {/* CTA Button - Desktop */}
+            <div className="hidden lg:block">
               <Link
-                href="/contact"
-                className="bg-[#B8860B] text-white px-5 py-2.5 rounded font-medium hover:bg-[#9a7209] transition-all duration-300 hover:-translate-y-0.5"
+                href={siteConfig.nav.cta.href}
+                className="bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-[#7a9a6d] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
               >
-                Get a Quote
+                {siteConfig.nav.cta.text}
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 text-[#2D2D2D]"
+              className="lg:hidden p-2 text-dark"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -83,35 +111,35 @@ export default function Navigation() {
           {/* Mobile Navigation */}
           <div
             className={`lg:hidden overflow-hidden transition-all duration-300 ${
-              isOpen ? 'max-h-96 mt-4 pt-4 border-t border-gray-100' : 'max-h-0'
+              isOpen ? 'max-h-96 pb-6' : 'max-h-0'
             }`}
           >
-            <div className="space-y-2">
+            <div className="space-y-1 pt-4 border-t border-gray-100">
               {siteConfig.nav.links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-3 px-4 rounded font-medium transition-colors duration-300 ${
+                  className={`block py-3 px-4 rounded-lg font-medium transition-colors duration-300 ${
                     pathname === link.href
-                      ? 'bg-[#F5F0E8] text-[#B8860B]'
-                      : 'text-[#333333] hover:bg-[#F5F0E8] hover:text-[#B8860B]'
+                      ? 'bg-mint text-primary'
+                      : 'text-dark hover:bg-mint hover:text-primary'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href={siteConfig.nav.cta.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-center bg-[#B8860B] text-white py-3 px-4 rounded font-medium hover:bg-[#9a7209] transition-colors duration-300 mt-2"
+                className="block text-center bg-primary text-white py-3 px-4 rounded-full font-medium hover:bg-[#7a9a6d] transition-colors duration-300 mt-4"
               >
-                Get a Quote
+                {siteConfig.nav.cta.text}
               </Link>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </>
   );
 }

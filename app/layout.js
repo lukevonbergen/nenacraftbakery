@@ -1,19 +1,21 @@
 import './globals.css';
-import { Open_Sans, Playfair_Display } from 'next/font/google';
+import { Nunito_Sans, Cormorant_Garamond } from 'next/font/google';
 import Navigation from '@/components/navigation/Navigation';
 import Footer from '@/components/footer/Footer';
 import { siteConfig } from '@/config/siteConfig';
 
-// Load Open Sans font
-const openSans = Open_Sans({
+// Load Nunito Sans font (body text - similar to Ambit)
+const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
-  variable: '--font-opensans',
+  variable: '--font-nunito',
+  weight: ['300', '400', '500', '600', '700'],
 });
 
-// Load Playfair Display font
-const playfair = Playfair_Display({
+// Load Cormorant Garamond font (headings - similar to Gatefold Demi)
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-cormorant',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata = siteConfig.metadata.base;
@@ -23,12 +25,12 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body
         className={`
-          ${openSans.variable}
-          ${playfair.variable}
+          ${nunitoSans.variable}
+          ${cormorant.variable}
           font-sans
           antialiased
           bg-white
-          text-[#333333]
+          text-dark
         `}
       >
         <Navigation />
